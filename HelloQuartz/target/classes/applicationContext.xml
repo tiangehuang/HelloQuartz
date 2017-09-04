@@ -27,7 +27,7 @@
                            http://www.springframework.org/schema/util/spring-util.xsd">
     
     <bean id="myJob" class="com.tiange.task.MyJob">
-    	<property name="myService" ref="myService"></property>
+    	<property name="myService" value="com.tiange.service.impl.MyServiceImpl"></property>
     </bean>
     <bean id="myService" class="com.tiange.service.impl.MyServiceImpl"></bean>                       
 	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
