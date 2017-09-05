@@ -34,6 +34,11 @@
 		<property name="jobDetail">
 			<bean class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
 				<property name="jobClass" value="com.tiange.task.MyJob"/>
+				<property name="jobDataAsMap">
+					<map>
+						<entry key="service" value-ref="pmsPushService"/>
+					</map>
+				</property>
 			</bean>
 		</property>
 		<property name="cronExpression" value="*/3 * * * * ? *"/>
